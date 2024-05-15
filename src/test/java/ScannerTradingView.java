@@ -1,4 +1,5 @@
 import com.codeborne.selenide.Configuration;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import utils.Counters;
 import utils.SendMessage;
@@ -7,6 +8,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class ScannerTradingView {
 
+@Tag("lesson")
 @Test
     public void getMoney() {
         Configuration.browserSize = "1920x1280";
