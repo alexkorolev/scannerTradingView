@@ -13,5 +13,6 @@ public class SendMessage {
                 .body(bodyData)
                 .contentType(ContentType.JSON)
                 .post("/sendMessage");
+
     }
 }

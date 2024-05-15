@@ -40,7 +40,6 @@ public class TakePrices {
         RSI4H = Double.parseDouble($x("//div[contains(@class,'tablesWrapper')]/div[1]//tr[2]/td[2]").getText());
         stochRSI4H = Float.parseFloat($x("//div[contains(@class,'tablesWrapper')]/div[1]//tr[9]/td[2]").getText().replace("−", ""));
 
-
         $x("//*[contains(@class,'tab-content')]//*[contains(text(),'1 час')]").click();
         sleep(1000);
         priceSMA100H = Double.parseDouble($x("//div[contains(@class,'tablesWrapper')]/div[2]//tr[11]/td[2]").getText());

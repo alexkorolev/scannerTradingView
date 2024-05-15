@@ -50,7 +50,7 @@ public class ScannerTradingView {
         i--;
         sleep(60000);
         }
-        signal.sendTelegram("Завершил работу");
+        signal.sendTelegram("Завершил работу!");
     }
 }
 

@@ -91,7 +91,6 @@ public class ComparePrices extends Counters{
                 counters.changeLastMessageRSIH(ticker,"↓ ↓ ↓ ATTENTION ↓ ↓ ↓ \n" + "\t" + ticker + "\n RSI+stochRSI 1H OVERSOLD!!!");
             }
         }
-
         if (counters.getNumCycle() >= 324)
         {
             counters.changeLastMessageRSI15M(ticker, "New");

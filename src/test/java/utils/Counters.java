@@ -1,7 +1,6 @@
 package utils;
 
 public class Counters {
-
     private static int numCycle;
 
     private static String lastMessageGoldH;
