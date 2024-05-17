@@ -1,25 +1,25 @@
-import com.codeborne.selenide.Configuration;
+
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import utils.Counters;
 import utils.SendMessage;
 import utils.TakePrices;
+
+
 import static com.codeborne.selenide.Selenide.*;
 
-public class ScannerTradingView {
+public class ScannerTradingView extends Base{
 
 @Tag("lesson")
 @Test
     public void getMoney() {
-        Configuration.browserSize = "1920x1280";
-        Configuration.headless = false;
 
         Counters counters = new Counters();
         SendMessage signal = new SendMessage();
         signal.sendTelegram("Начинаю работу");
 
-        int i = 60;
-        while (0 < i && i <= 60) {
+        int i = 600;
+        while (0 < i && i <= 600) {
 
         open("https://ru.tradingview.com/symbols/XAUUSD/technicals/?exchange=FX");
             TakePrices.checkPrices(counters, signal, "GOLD");
@@ -52,7 +52,7 @@ public class ScannerTradingView {
         i--;
         sleep(60000);
         }
-        signal.sendTelegram("Завершил работу!");
+        signal.sendTelegram("Завершил работу");
     }
 }
 

@@ -32,7 +32,7 @@ public class TakePrices {
         String s = "0.000";
 
         $x("//*[contains(@class,'tab-content')]//*[contains(text(),'4 часа')]").click();
-        sleep(1000);
+        sleep(1500);
         priceSMA1004H = Double.parseDouble($x("//div[contains(@class,'tablesWrapper')]/div[2]//tr[11]/td[2]").getText());
         priceEMA1004H = Double.parseDouble($x("//div[contains(@class,'tablesWrapper')]/div[2]//tr[10]/td[2]").getText());
         priceSMA2004H = Double.parseDouble($x("//div[contains(@class,'tablesWrapper')]/div[2]//tr[13]/td[2]").getText());
@@ -41,7 +41,7 @@ public class TakePrices {
         stochRSI4H = Float.parseFloat($x("//div[contains(@class,'tablesWrapper')]/div[1]//tr[9]/td[2]").getText().replace("−", ""));
 
         $x("//*[contains(@class,'tab-content')]//*[contains(text(),'1 час')]").click();
-        sleep(1000);
+        sleep(1500);
         priceSMA100H = Double.parseDouble($x("//div[contains(@class,'tablesWrapper')]/div[2]//tr[11]/td[2]").getText());
         priceEMA100H = Double.parseDouble($x("//div[contains(@class,'tablesWrapper')]/div[2]//tr[10]/td[2]").getText());
         priceSMA200H = Double.parseDouble($x("//div[contains(@class,'tablesWrapper')]/div[2]//tr[13]/td[2]").getText());
@@ -51,18 +51,18 @@ public class TakePrices {
 
 
         $x("//*[contains(@class,'tab-content')]//*[contains(text(),'15 минут')]").click();
-        sleep(1000);
+        sleep(1500);
         RSI15M = Double.parseDouble($x("//div[contains(@class,'tablesWrapper')]/div[1]//tr[2]/td[2]").getText());
         stochRSI15M = Float.parseFloat($x("//div[contains(@class,'tablesWrapper')]/div[1]//tr[9]/td[2]").getText().replace("−", ""));
 
         $x("//*[contains(@class,'tab-content')]//*[contains(text(),'5 минут')]").click();
-        sleep(1000);
+        sleep(1500);
         price = Double.parseDouble($x("//div[@class='js-symbol-header-ticker quote-ticker-inited']//div[contains(@class,'last')]//span[contains(@class, 'last')]").getText());
         RSI5M = Double.parseDouble($x("//div[contains(@class,'tablesWrapper')]/div[1]//tr[2]/td[2]").getText());
         stochRSI5M = Float.parseFloat($x("//div[contains(@class,'tablesWrapper')]/div[1]//tr[9]/td[2]").getText().replace("−", ""));
 
         $x("//*[contains(@class,'tab-content')]//*[contains(text(),'1 минут')]").click();
-        sleep(1000);
+        sleep(1500);
         RSI1M = Double.parseDouble($x("//div[contains(@class,'tablesWrapper')]/div[1]//tr[2]/td[2]").getText());
         stochRSI1M = Float.parseFloat($x("//div[contains(@class,'tablesWrapper')]/div[1]//tr[9]/td[2]").getText().replace("−", ""));
 

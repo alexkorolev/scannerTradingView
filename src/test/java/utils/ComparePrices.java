@@ -37,7 +37,7 @@ public class ComparePrices extends Counters{
         }
 
         //Check H Stoch RSI signals
-        if (stochRSIH > 80 && stochRSI15M > 80 && stochRSI5M > 80) {
+        if (stochRSIH > 85 && stochRSI15M > 85 && stochRSI5M > 85) {
             if (counters.getLastMessageStochMain(ticker).equals("↑ ↑ ↑ ATTENTION ↑ ↑ ↑ \n" + "\t" + ticker + "\n STOCH RSI 1H OVERBOUGHT!!!")) {
             } else {
                 signal.sendTelegram("↑ ↑ ↑ ATTENTION ↑ ↑ ↑ \n" + "\t" + ticker + "\n STOCH RSI 1H OVERBOUGHT!!!");
@@ -54,7 +54,7 @@ public class ComparePrices extends Counters{
         }
 
         //Check 15M Stoch+RSI signals
-        if (RSI5M > 60 && RSI15M > 60 && stochRSI5M > 80 && stochRSI15M > 80) {
+        if (RSI5M > 65 && RSI15M > 65 && stochRSI5M > 90 && stochRSI15M > 90) {
 
             if (counters.getLastMessageRSI15M(ticker).equals("↑ ↑ ATTENTION ↑ ↑ \n" + "\t" + ticker + "\n RSI+stochRSI 15M OVERBOUGHT!!!"))
             { } else {
@@ -63,7 +63,7 @@ public class ComparePrices extends Counters{
             }
         }
 
-        if (RSI5M < 37 && RSI15M < 37 && stochRSI5M < 15 && stochRSI15M < 15) {
+        if (RSI5M < 35 && RSI15M < 35 && stochRSI5M < 10 && stochRSI15M < 10) {
 
             if (counters.getLastMessageRSI15M(ticker).equals("↓ ↓ ATTENTION ↓ ↓ \n" + "\t" + ticker + "\n RSI+stochRSI 15M OVERSOLD!!!")) {
             } else {
@@ -74,7 +74,7 @@ public class ComparePrices extends Counters{
 
         //Check H Stoch+RSI signals
 
-        if (RSIH > 60 && RSI15M > 60 && stochRSIH > 80 && stochRSI15M > 80) {
+        if (RSIH > 65 && RSI15M > 65 && stochRSIH > 90 && stochRSI15M > 90) {
 
             if (counters.getLastMessageRSIH(ticker).equals("↑ ↑ ↑ ATTENTION ↑ ↑ ↑ \n" + "\t" + ticker + "\n RSI+stochRSI 1H OVERBOUGHT!!!"))
             { } else {
@@ -83,7 +83,7 @@ public class ComparePrices extends Counters{
             }
         }
 
-        if (RSIH < 37 && RSI15M < 37 && stochRSIH < 20 && stochRSI15M < 20){
+        if (RSIH < 35 && RSI15M < 35 && stochRSIH < 10 && stochRSI15M < 10){
 
             if (counters.getLastMessageRSIH(ticker).equals("↓ ↓ ↓ ATTENTION ↓ ↓ ↓ \n" + "\t" + ticker + "\n RSI+stochRSI 1H OVERSOLD!!!"))
             { } else {
